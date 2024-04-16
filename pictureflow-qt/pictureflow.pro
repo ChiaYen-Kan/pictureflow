@@ -1,3 +1,4 @@
+QT += core gui widgets
 TARGET = pictureflow
 TEMPLATE = app
 HEADERS = pictureflow.h

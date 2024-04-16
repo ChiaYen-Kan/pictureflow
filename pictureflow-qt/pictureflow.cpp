@@ -28,8 +28,8 @@
 #include "pictureflow.h"
 
 // detect Qt version
-#if QT_VERSION < 0x040300
-#error PictureFlow widgets need Qt 4.3 or later
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+#error PictureFlow widgets need Qt 5.15 or later
 #endif
 
 #include <QApplication>

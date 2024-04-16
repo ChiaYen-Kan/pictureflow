@@ -27,6 +27,7 @@
 
 #include <QtGui>
 
+#include <QApplication>
 #include "pictureflow.h"
 
 QStringList findFiles(const QString& path = QString())
@@ -65,19 +66,19 @@ public:
                 qDebug("benchmarking.... please wait");
                 const int blit_count = 10;
 
-                QTime stopwatch;
+                QElapsedTimer stopwatch;
                 stopwatch.start();
                 for (int i = 0; i < blit_count; i++) {
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
-                    render(); repaint(); QApplication::flush(); QApplication::syncX();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
+                    render(); repaint();
                 }
                 QString msg;
                 int elapsed = stopwatch.elapsed();
